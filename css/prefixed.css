@@ -9,8 +9,7 @@ html {
 /*nav*/
 nav {	
 	position: fixed;
-	top: 0;
-	height: 240px;
+	top: 0;	
 	left: 0;
 	right: 0;	
 	background-color: #222;			
@@ -207,7 +206,7 @@ nav ul li:first-child a:hover {
 		font-size: 22px;	  			  	
 	}
 	nav {		
-	 	top: -100vh;	
+	 	top: -105vh;	
 	}
 }
 @media(max-width: 320px) and (orientation: portrait) {
@@ -238,3 +237,42 @@ nav ul li:first-child a:hover {
 		        transform: scale(0.6);
 	}
 }
+/*banner*/
+/*.banner {
+	margin-top: 240px; 
+	position: relative;
+	overflow-x: hidden;	
+}
+
+
+.slide h1 {
+	position: relative;
+	text-align: center;
+	top: 100%;
+	left: 50%;
+	font-size: 48px;
+	letter-spacing: 6px;
+	transform: translate(-50%, -100%);
+	background-color: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	text-transform: uppercase;	
+	padding: 30px
+}
+div.arrow {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	font-size: 80px;
+	color: #fff;
+}
+.arrow-left {
+	left: 0;
+	margin-left: 50px;
+}
+.arrow-right {
+	right: 0;
+	margin-right: 50px;
+}*/
