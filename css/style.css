@@ -142,7 +142,7 @@ nav ul li:first-child a:hover {
 		flex-direction: column;
 	}
 	nav ul li {
-		flex-basis: 20%;	
+		flex-basis: 15%;	
 		align-self: center;
 	}
 	nav ul li a {	
@@ -160,40 +160,30 @@ nav ul li:first-child a:hover {
 @media(max-width: 420px) and (orientation: portrait) {
 	nav ul {
 		height: 100vh;
-		padding: 0px;
+		padding: 0 0 80px 0;
 	}
 	nav ul li a {	
-		padding: 20px;
-		font-size: 22px;	  			  	
+		padding: 12px;
+		font-size: 18px;	  			  	
 	}
 	nav {		
-	 	top: -105vh;	
-	}
-}
-@media(max-width: 320px) and (orientation: portrait) {
-	nav ul {
-		height: 100vh;
-		padding: 0px;
-	}
-	nav ul li a {	
-		padding: 15px;
-		font-size: 20px;	  			  	
+	 	top: -110vh;	
 	}
 }
 @media(max-width: 825px) and (orientation: landscape) {
 	nav ul {
 		height: 100vh;
-		padding: 0px;
+		padding: 0 0 40px 0;
 	}
 	nav ul li a {	
 		margin: 5px;
 		padding: 10px;
-		font-size: 14px;	  			  	
+		font-size: 12px;	  			  	
 	}
 	nav ul li:first-child a {
-		margin: -45px;
+		margin: -65px;
 		padding: 10px;
-		transform: scale(0.6);
+		transform: scale(0.4);
 	}
 }
 /*banner*/
