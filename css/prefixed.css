@@ -8,13 +8,15 @@ html {
 }
 /*nav*/
 nav {	
-	position: fixed;	
-	top:0;
-	width: 100%;	
+	position: fixed;
+	top: 0;
+	height: 240px;
+	left: 0;
+	right: 0;	
 	background-color: #222;			
 	box-shadow: 0 4px 10px -2px #aaa;
-	-webkit-transition: .2s;
-	transition: .2s;
+	-webkit-transition: .3s;
+	transition: .3s;
 }
 nav ul {
 	display: -webkit-box;
@@ -24,6 +26,7 @@ nav ul {
 	max-width: 1280px;
 	list-style: none;
 	margin: 0 auto;
+	padding-right: 20px;
 }
 nav ul li {
 	-webkit-flex-basis: 20%;
@@ -46,6 +49,7 @@ nav ul li a {
 	text-align: center;
 	text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 2px;
   -webkit-transition: .5s;
   transition: .5s;	  	
 }
@@ -72,12 +76,28 @@ nav ul li:first-child a {
 }	
 nav ul li a:hover {  		
  	background-position: right center;
- 	-webkit-transform: scale(1.05);
- 	    -ms-transform: scale(1.05);
- 	        transform: scale(1.05);
  	box-shadow: 0 0 25px #aaa;
 }
-@media(max-width: 1024px){
+nav ul li:first-child a:hover {
+ 	box-shadow: none;
+}
+.minilogo {
+	display: none;
+}
+@media(max-width: 1024px) {
+	.navigation {
+		background-color: #333;
+		height: 140px;
+		width: 100%;
+		box-shadow: 0 4px 10px -2px #aaa;
+	}
+	.minilogo {
+		display: block;
+		position: relative;
+		top: 0;
+		left: 0;	
+		padding: 20px;	
+	}
 	.burger {		
 	 	position: fixed;
 		display: block;
@@ -138,5 +158,83 @@ nav ul li a:hover {
 	}
 	nav.active {
 		top: 0px;
+	}
+	nav ul li {
+	-webkit-flex-basis: 20%;
+	    -ms-flex-preferred-size: 20%;
+	        flex-basis: 20%;	
+	-webkit-align-self: flex-end;	
+	    -ms-flex-item-align: end;	
+	        align-self: flex-end;
+	}
+}
+@media(max-width: 870px) {
+	nav ul {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+	}
+	nav ul li {
+		-webkit-flex-basis: 20%;
+		    -ms-flex-preferred-size: 20%;
+		        flex-basis: 20%;	
+		-webkit-align-self: center;	
+		    -ms-flex-item-align: center;	
+		            -ms-grid-row-align: center;	
+		        align-self: center;
+	}
+	nav ul li a {	
+		margin: 10px;
+		padding: 10px 20px;
+		font-size: 16px;	  			  	
+	}
+	nav ul li:first-child a {
+		margin: 5px;
+	}
+	nav {		
+	 	top: -730px;	
+	}
+}
+@media(max-width: 420px) and (orientation: portrait) {
+	nav ul {
+		height: 100vh;
+		padding: 0px;
+	}
+	nav ul li a {	
+		padding: 20px;
+		font-size: 22px;	  			  	
+	}
+	nav {		
+	 	top: -100vh;	
+	}
+}
+@media(max-width: 320px) and (orientation: portrait) {
+	nav ul {
+		height: 100vh;
+		padding: 0px;
+	}
+	nav ul li a {	
+		padding: 15px;
+		font-size: 20px;	  			  	
+	}
+}
+@media(max-width: 825px) and (orientation: landscape) {
+	nav ul {
+		height: 100vh;
+		padding: 0px;
+	}
+	nav ul li a {	
+		margin: 5px;
+		padding: 10px;
+		font-size: 14px;	  			  	
+	}
+	nav ul li:first-child a {
+		margin: -45px;
+		padding: 10px;
+		-webkit-transform: scale(0.6);
+		    -ms-transform: scale(0.6);
+		        transform: scale(0.6);
 	}
 }
