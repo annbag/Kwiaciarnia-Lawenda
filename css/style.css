@@ -194,18 +194,17 @@ nav ul li:first-child a:hover {
 	margin: 245px auto 0;
 	width: 100%;
 	height: calc(100vh - 245px);
-	overflow: hidden;
-	background-color: #ccc;
+	overflow: hidden;	
 }
-.banner-image {
+.banner-image {	
 	position: absolute;
-	background-image: url(../images/banner/1.jpg);
-	background-size: cover;
-  background-position: center;
-	top: 0;
-	left: 0;
-	right: 0;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 	height: 100vh;
+	background-color: #000;
+	animation: moveImage 4s linear infinite;
 }
 .banner-text h1 {
 	position: absolute;
@@ -220,7 +219,9 @@ nav ul li:first-child a:hover {
 	background-color: rgba(0, 0, 0, 0.5);
 	color: #fff;
 	z-index: 1;
-	padding: 30px
+	padding: 30px;
+	animation: moveText 4s linear infinite;
+
 }
 div.arrow {	
 	position: absolute;
@@ -241,4 +242,44 @@ div.arrow {
 }
 section p {
 	line-height: 250%;
+}
+@keyframes moveImage {
+	0% {		
+		opacity: 0;
+	}
+	8% {
+		opacity: 0;
+	}
+	13% {
+		opacity: 1;
+	}
+	87% {
+		opacity: 1;
+	}
+	92% {
+		opacity: 0;
+	}
+	100% {		
+		opacity: 0;
+	}
+}
+@keyframes moveText {
+	0% {		
+		opacity: 0;
+	}
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	90% {
+		opacity: 0;
+	}
+	100% {		
+		opacity: 0;
+	}
 }
