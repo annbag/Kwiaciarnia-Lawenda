@@ -29,12 +29,12 @@ nav ul {
 	padding-right: 20px;
 }
 nav ul li {
-	-webkit-flex-basis: 20%;
-	    -ms-flex-preferred-size: 20%;
+	-ms-flex-preferred-size: 20%;
+	    -webkit-flex-basis: 20%;
 	        flex-basis: 20%;	
-	-webkit-align-self: center;	
-	    -ms-flex-item-align: center;	
-	            -ms-grid-row-align: center;	
+	-ms-flex-item-align: center;	
+	    -ms-grid-row-align: center;	
+	    -webkit-align-self: center;	
 	        align-self: center;
 }
 nav ul li a {	
@@ -87,7 +87,7 @@ nav ul li:first-child a:hover {
 @media(max-width: 1024px) {
 	.navigation {
 		background-color: #333;
-		height: 140px;
+		height: 144px;
 		width: 100%;
 		box-shadow: 0 4px 10px -2px #aaa;
 	}
@@ -107,7 +107,7 @@ nav ul li:first-child a:hover {
 	 	height: 40px;
 	 	-webkit-transition: .2s;
 	 	transition: .2s;
-	 	z-index: 1; 	
+	 	z-index: 10; 	
 	}
 	.burger span {
 	 	position: absolute;
@@ -160,26 +160,26 @@ nav ul li:first-child a:hover {
 		top: 0px;
 	}
 	nav ul li {			
-		-webkit-align-self: flex-end;			
-		    -ms-flex-item-align: end;			
+		-ms-flex-item-align: end;			
+		    -webkit-align-self: flex-end;			
 		        align-self: flex-end;
 	}
 }
 @media(max-width: 870px) {
 	nav ul {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
+		-ms-flex-direction: column;
+		    -webkit-box-orient: vertical;
+		    -webkit-box-direction: normal;
+		    -webkit-flex-direction: column;
 		        flex-direction: column;
 	}
 	nav ul li {
-		-webkit-flex-basis: 15%;
-		    -ms-flex-preferred-size: 15%;
+		-ms-flex-preferred-size: 15%;
+		    -webkit-flex-basis: 15%;
 		        flex-basis: 15%;	
-		-webkit-align-self: center;	
-		    -ms-flex-item-align: center;	
-		            -ms-grid-row-align: center;	
+		-ms-flex-item-align: center;	
+		    -ms-grid-row-align: center;	
+		    -webkit-align-self: center;	
 		        align-self: center;
 	}
 	nav ul li a {	
@@ -229,21 +229,20 @@ nav ul li:first-child a:hover {
 .banner {	 
 	position: relative;
 	max-width: 1280px;
-	margin: 245px auto 0;
+	margin: 0 auto;
 	width: 100%;
-	height: -webkit-calc(100vh - 245px);
-	height: calc(100vh - 245px);
-	overflow: hidden;	
+	height: 100vh;
+	overflow: hidden;		
 }
 .banner-image {	
 	position: absolute;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	    -ms-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
-	width: 100%;
-	height: 100vh;
+	min-width: 100%;
+	min-height: 100vh;
 	-webkit-animation: moveImage 4s linear infinite;
 	        animation: moveImage 4s linear infinite;
 }
@@ -265,7 +264,6 @@ nav ul li:first-child a:hover {
 	padding: 30px;
 	-webkit-animation: moveText 4s linear infinite;
 	        animation: moveText 4s linear infinite;
-
 }
 div.arrow {	
 	position: absolute;
@@ -277,6 +275,8 @@ div.arrow {
 	color: #fff;
 	z-index: 1;
 	cursor: pointer;
+	-webkit-filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, .8));
+	        filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, .8));
 }
 .arrow-left {
 	left: 0;
@@ -367,5 +367,30 @@ section p {
 	}
 	100% {		
 		opacity: 0;
+	}
+}
+@media(max-width: 1024px) {
+	.banner {					
+		height: -webkit-calc(100vh - 144px);					
+		height: calc(100vh - 144px);		
+	}
+	.banner-text h1 {		
+		font-size: 42px;	
+	}
+}
+@media(max-width: 870px) {
+	.banner-text h1 {		
+		font-size: 36px;	
+	}
+}
+@media(max-width: 425px) {
+	.arrow-left {	
+		margin-left: 20px;
+	}
+	.arrow-right {	
+		margin-right: 20px;
+	}
+	.banner-text h1 {		
+		font-size: 30px;	
 	}
 }
