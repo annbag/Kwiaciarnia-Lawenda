@@ -40,8 +40,8 @@ arrowRightHtml.addEventListener('click', function() {
 
 arrowLeftHtml.addEventListener('click', function() {
 	activeElement--;
-	if (activeElement == (images.length)) {
-		activeElement = 0;
+	if (activeElement == -1) {
+		activeElement = images.length-1;
 	} 
 	bannerImgHtml.src = images[activeElement];
 	bannerTxtHtml.textContent = txt[activeElement];
