@@ -48,7 +48,7 @@ nav ul li a {
 	transition: .5s;	  	
 }
 nav ul li:first-child a {
-	margin: 20px;
+	margin: 5px;
 	padding: 0;	
 	box-shadow: none;
 }
@@ -76,8 +76,8 @@ nav ul li:first-child a:hover {
 }
 @media(max-width: 1024px) {
 	.navigation {
-		background-color: #333;
-		height: 144px;
+		background-color: #333;		
+		/*height: 114px;*/
 		width: 100%;
 		box-shadow: 0 4px 10px -2px #aaa;
 	}
@@ -86,13 +86,13 @@ nav ul li:first-child a:hover {
 		position: relative;
 		top: 0;
 		left: 0;	
-		padding: 20px;	
+		padding: 5px 0 1px 35px;	
 	}
 	.burger {		
 	 	position: fixed;
 		display: block;
-	 	top: 50px;
-	 	right: 50px; 	
+	 	top: 35px;
+	 	right: 35px; 	
 	 	width: 60px;
 	 	height: 40px;
 	 	transition: .2s;
@@ -132,7 +132,7 @@ nav ul li:first-child a:hover {
 		transform: rotate(-90deg);
 	}
 	nav {		
-	 	top: -250px;	
+	 	top: -110vh;	
 	}
 	nav.active {
 		top: 0px;
@@ -163,19 +163,6 @@ nav ul li:first-child a:hover {
 		margin: 5px;
 	}
 	nav {		
-	 	top: -730px;	
-	}
-}
-@media(max-width: 420px) and (orientation: portrait) {
-	nav ul {
-		height: 100vh;
-		padding: 0 0 80px 0;
-	}
-	nav ul li a {	
-		padding: 12px;
-		font-size: 18px;	  			  	
-	}
-	nav {		
 	 	top: -110vh;	
 	}
 }
@@ -193,6 +180,183 @@ nav ul li:first-child a:hover {
 		margin: -65px;
 		padding: 10px;
 		transform: scale(0.4);
+	}
+}
+@media(max-width: 420px) and (orientation: portrait) {
+	nav ul {
+		height: 100vh;
+		padding: 0 0 80px 0;
+	}
+	nav ul li a {	
+		padding: 12px;
+		font-size: 18px;	  			  	
+	}
+	nav {		
+	 	top: -110vh;	
+	}
+}
+
+/*header*/
+.welcome {
+	position: relative;
+	max-width: 1280px;
+	margin: 135px auto 0;
+	height: calc(100vh - 135px);
+	width: 100%;
+	background-image: url(../images/lavender.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	 background-size: cover; 
+	background-position: center;	
+	text-align: center; 
+}
+.welcome-wrap {
+	position: absolute;
+	height: calc(100vh - 135px);
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.welcome h1 {
+	font-family: 'Charmonman', cursive;
+	font-size: 100px;
+	color: #9595ea;	
+	text-transform: capitalize; 
+	text-shadow: 0px 0px 1px #222;	
+}
+.welcome h1~h1 {
+	margin-top: -70px;
+}
+.welcome h2 {	
+	font-size: 50px;
+	margin: 30px 15px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.welcome p {
+	font-size: 40px;
+	color: #bfbff2;
+	text-transform: uppercase;	
+}
+.welcome button.arrow-down {
+	position: absolute;
+	bottom: 10%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 60px;
+	height: 60px;
+	line-height: 60px;	
+	border-radius: 50%;
+	border-style: none;
+	font-size: 60px;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	overflow: hidden;
+	transition: .3s;
+}
+.welcome button.arrow-down:hover {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+.welcome button.arrow-down:hover i {
+	
+	animation: arrow 1s linear infinite both;
+}
+@keyframes arrow {
+	0% {
+		transform: translateY(-50%);
+	}
+	100% {
+		transform: translateY(50%);
+	}
+}
+@media(max-width: 1024px) {
+	.welcome {	
+		margin: 0 auto;
+		height: calc(100vh - 110px); 
+	}
+	.welcome-wrap {
+		height: calc(100vh - 110px);
+	}
+	.welcome h1 {
+		font-size: 80px;
+	}
+	.welcome h1~h1 {
+		margin-top: -60px;
+	}
+	.welcome h2 {	
+		font-size: 40px;
+	}
+	.welcome p {
+		font-size: 34px;
+	}
+	.welcome button.arrow-down:hover i {	
+		animation: none;
+	}
+}
+@media(max-width: 825px) and (orientation: landscape) {
+	.welcome h1 {
+		font-size: 40px;
+	}
+	.welcome h1~h1 {
+		margin-top: -30px;
+	}
+	.welcome h2 {	
+		margin: 0;
+		font-size: 24px;
+	}
+	.welcome p {
+		font-size: 20px;
+	}
+	.welcome button.arrow-down {
+		bottom: 5%;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;	
+		font-size: 40px;
+	}
+}
+@media(max-width: 540px) and (orientation: landscape) {
+	.welcome h1 {
+		font-size: 32px;
+	}
+	.welcome h1~h1 {
+		margin-top: -24px;
+	}
+	.welcome h2 {	
+		font-size: 20px;
+	}
+	.welcome p {
+		font-size: 18px;
+	}
+	.welcome button.arrow-down {
+		bottom: 5%;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;	
+		font-size: 40px;
+	}
+}
+@media(max-width: 420px) and (orientation: portrait) {
+	.welcome h1 {
+		font-size: 40px;
+	}
+	.welcome h1~h1 {
+		margin-top: -30px;
+	}
+	.welcome h2 {	
+		margin-top: 30px;
+		font-size: 24px;
+	}
+	.welcome p {
+		margin-top: 50px;
+		font-size: 20px;
+	}
+	.welcome button.arrow-down {
+		bottom: 5%;
+		width: 40px;
+		height: 40px;
+		line-height: 40px;	
+		font-size: 40px;
 	}
 }
 /*banner*/
@@ -246,9 +410,6 @@ div.arrow {
 .arrow-right {
 	right: 0;
 	margin-right: 50px;
-}
-section p {
-	line-height: 250%;
 }
 @keyframes moveImage {
 	0% {		
