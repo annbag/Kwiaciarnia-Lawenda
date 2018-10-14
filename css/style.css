@@ -341,6 +341,9 @@ nav ul li:first-child a:hover {
 	}
 }
 @media(max-width: 420px) and (orientation: portrait) {
+	.welcome {
+		background-image: url(../images/1.jpg);
+	}
 	.welcome h1 {
 		font-size: 40px;
 	}
