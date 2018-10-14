@@ -53,5 +53,19 @@ arrowLeftHtml.addEventListener('click', function() {
 	}
 ) 
 
-
-
+//add map
+// function initMap () {
+//   // Lokalizacja Uluru
+//   const uluru = {lat: 52.742879, lng: 23.583948};
+//   // Mapa, skupiona na Uluru
+//   var map = new google.maps.Map (
+//       document.getElementById('map'), {
+//       	zoom: 4, 
+//       	center: uluru
+//       });
+//   // Znacznik, umieszczony w Uluru
+//   var marker = new google.maps.Marker({
+//   	position: uluru, 
+//   	map: map
+//   });
+// }
