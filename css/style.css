@@ -209,7 +209,7 @@ nav ul li:first-child a:hover {
 	position: relative;
 	max-width: 1280px;
 	margin: 0 auto;
-	height: 100vh;
+	height: calc(100vh - 131px);
 	width: 100%;
 	background-image: url(../images/lavender1.jpg);
 	background-repeat: no-repeat;
@@ -220,7 +220,7 @@ nav ul li:first-child a:hover {
 }
 .welcome-wrap {
 	position: absolute;
-	height: 100vh;
+	height: calc(100vh - 131px);
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -299,13 +299,14 @@ nav ul li:first-child a:hover {
 }
 @media(max-width: 825px) and (orientation: landscape) {
 	.welcome h1 {
+		margin-top: 15px;
 		font-size: 40px;
 	}
 	.welcome h1~h1 {
 		margin-top: -30px;
 	}
 	.welcome h2 {	
-		margin: 0;
+		margin: 20px;
 		font-size: 24px;
 	}
 	.welcome p {
@@ -326,7 +327,7 @@ nav ul li:first-child a:hover {
 	.welcome h1~h1 {
 		margin-top: -24px;
 	}
-	.welcome h2 {	
+	.welcome h2 {			
 		font-size: 20px;
 	}
 	.welcome p {
@@ -377,7 +378,7 @@ nav ul li:first-child a:hover {
 }
 .banner-image img {	
 	position: absolute;
-	top: 60%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	min-width: 100%;
@@ -462,10 +463,6 @@ div.arrow {
 	}
 }
 @media(max-width: 1024px) {
-	.banner {						
-		/*height: calc(100vh - 131px);		*/
-		height: 100vh;
-	}
 	.banner-text h1 {		
 		font-size: 42px;	
 	}
@@ -507,4 +504,13 @@ div.arrow {
 		padding: 30px 15px;	
 		font-size: 22px;	
 	}
+}
+footer {
+	background-color: #333;	
+	text-align: center;
+}
+footer p {
+	padding: 20px;
+	font-size: 24px;
+	color: #bfbff2;
 }
