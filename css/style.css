@@ -509,16 +509,30 @@ div.arrow {
 	max-width: 1280px;
 	margin: 0 auto;
 	display: flex;
-	height: 70vh;
-	background-image: url(../images/4.jpg);
-	background-repeat: no-repeat;	
+	height: 70vh;	
 	color: #fff;
 }
 .contact .information {
+	position: relative;
+	top: 0;
+	left: 0;
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
-	background-color: rgba(0, 0, 0, 0.9);
+	background-image: url(../images/4.jpg);
+	background-repeat: no-repeat;	
+	background-position: center;
+	background-size: cover;
+}
+.contact .information .wrap {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	width: 100%;
+	height: 70vh;
+	padding: 0 30px;
+	background-color: rgba(0, 0, 0, 0.8);
 }
 .contact .information h1 {
 	text-align: center;
@@ -549,16 +563,121 @@ div.arrow {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 }
+.contact .map {
+	flex-basis: 60%;
+	background-color: #555;	
+} 
+@media (max-width: 1024px) {
+	.contact .information .wrap {
+		padding: 0 15px;
+	}
+	.contact .information h1 {
+		font-size: 24px;
+	}
+	.contact .information .info .contact-icon {
+		font-size: 34px;
+	}
+	.contact .information .info .text {
+		font-size: 18px;	
+	}
+	.contact .information .info .text p.title {
+		font-size: 20px;
+	}
+}
+@media (max-width: 870px) {
+	.contact {
+		flex-direction: column;
+		height: 100vh;
+	}
+	.contact .information .info {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+	.contact .map {
+		flex-basis: 30%;
+	}
+}
+@media (max-width: 870px) and (orientation: landscape){
+	.contact {		
+		height: 200vh;
+	}
+	.contact .map {
+		flex-basis: 50%;
+	}
+	.contact .information .wrap {
+		height: 100vh;
+	}
+	.contact .information h1 {
+		padding: 15px;
+		font-size: 30px;
+	}
+	.contact .information .info .contact-icon, .contact .information .info .text p.title {
+		font-size: 18px;
+	}
+	.contact .information .info .text {
+		font-size: 14px;	
+	}
+}
+@media (max-width: 670px) and (orientation: landscape) {	
+	.contact .information h1 {
+		padding: 10px;
+		font-size: 26px;
+	}
+	.contact .information .info .contact-icon {
+		font-size: 14px;
+	}
+	.contact .information .info .text {
+		font-size: 12px;	
+	}
+	.contact .information .info .text p.title {
+		font-size: 14px;
+	}
+}
+@media (max-width: 768px) and (orientation: portrait) {
+	.contact .information h1 {
+		font-size: 30px;
+	}
+	.contact .information .info .contact-icon {
+		font-size: 40px;
+	}
+	.contact .information .info .text {
+		font-size: 20px;	
+	}
+	.contact .information .info .text p.title {
+		font-size: 24px;
+	}
+}
+@media (max-width: 425px) and (orientation: portrait) {
+	.contact {		
+		height: 150vh;
+	}
+	.contact .map {
+		flex-basis: 50vh;
+	}
+	.contact .information .wrap {
+		height: 100vh;
+	}
+	.contact .information h1 {
+		font-size: 26px;
+	}
+	.contact .information .info .contact-icon, .contact .information .info .text p.title {
+		font-size: 20px;
+	}
+	.contact .information .info .text {
+		font-size: 16px;	
+	}
+}
+
+
 
 
 
 /*.contact .info div {
 	flex-grow: 1;
 }*/
-.contact .map {
-	flex-basis: 60%;
-	background-color: #555;	
-} 
+
 
 
 footer {
