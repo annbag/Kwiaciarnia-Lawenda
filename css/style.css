@@ -75,6 +75,9 @@ nav ul li:first-child a:hover {
 	display: none;
 }
 @media(max-width: 1024px) {
+	nav {	
+		position: fixed;
+	}
 	.navigation {
 		background-color: #333;		
 		height: 110px;
@@ -183,6 +186,13 @@ nav ul li:first-child a:hover {
 	}
 }
 @media(max-width: 420px) and (orientation: portrait) {
+	.burger {		
+	 	width: 40px;
+	 	height: 30px;
+	}
+	.burger span {
+	 	height: 6px;
+	}
 	nav ul {
 		height: 100vh;
 		padding: 0 0 80px 0;
@@ -369,7 +379,7 @@ nav ul li:first-child a:hover {
 	height: 100vh;
 	overflow: hidden;		
 }
-.banner-image {	
+.banner-image img {	
 	position: absolute;
 	top: 60%;
 	left: 50%;
@@ -377,6 +387,9 @@ nav ul li:first-child a:hover {
 	min-width: 100%;
 	min-height: 100vh;
 	animation: moveImage 4s linear infinite;
+}
+.banner-image-mini img {
+	display: none;
 }
 .banner-text h1 {
 	position: absolute;
@@ -453,7 +466,7 @@ div.arrow {
 	}
 }
 @media(max-width: 1024px) {
-	.banner {					
+	.banner {						
 		/*height: calc(100vh - 131px);		*/
 		height: 100vh;
 	}
@@ -462,11 +475,27 @@ div.arrow {
 	}
 }
 @media(max-width: 870px) {
+	.banner-image img {
+		display: none;
+	}
+	.banner-image-mini img{
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		min-width: 100%;
+		min-height: 100vh;
+		animation: moveImage 4s linear infinite;
+	}
 	.banner-text h1 {		
 		font-size: 36px;	
 	}
 }
 @media(max-width: 425px) {
+	div.arrow {	
+		font-size: 60px;
+	}
 	.arrow-left {	
 		margin-left: 20px;
 	}
@@ -475,5 +504,11 @@ div.arrow {
 	}
 	.banner-text h1 {		
 		font-size: 30px;	
+	}
+}
+@media(max-width: 360px) {
+	.banner-text h1 {	
+		padding: 30px 15px;	
+		font-size: 22px;	
 	}
 }
