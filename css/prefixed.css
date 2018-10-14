@@ -8,7 +8,7 @@ html {
 }
 /*nav*/
 nav {	
-	position: fixed;
+	position: relative;
 	top: 0;	
 	left: 0;
 	right: 0;	
@@ -54,7 +54,7 @@ nav ul li a {
 	transition: .5s;	  	
 }
 nav ul li:first-child a {
-	margin: 5px;
+	margin: 5px 5px 1px 5px;
 	padding: 0;	
 	box-shadow: none;
 }
@@ -87,7 +87,7 @@ nav ul li:first-child a:hover {
 @media(max-width: 1024px) {
 	.navigation {
 		background-color: #333;		
-		/*height: 114px;*/
+		height: 110px;
 		width: 100%;
 		box-shadow: 0 4px 10px -2px #aaa;
 	}
@@ -191,7 +191,7 @@ nav ul li:first-child a:hover {
 		margin: 5px;
 	}
 	nav {		
-	 	top: -110vh;	
+	 	top: -165vh;	
 	}
 }
 @media(max-width: 825px) and (orientation: landscape) {
@@ -222,7 +222,7 @@ nav ul li:first-child a:hover {
 		font-size: 18px;	  			  	
 	}
 	nav {		
-	 	top: -110vh;	
+	 	top: -130vh;	
 	}
 }
 
@@ -230,11 +230,11 @@ nav ul li:first-child a:hover {
 .welcome {
 	position: relative;
 	max-width: 1280px;
-	margin: 135px auto 0;
-	height: -webkit-calc(100vh - 135px);
-	height: calc(100vh - 135px);
+	margin: 0 auto;
+	height: -webkit-calc(100vh - 131px);
+	height: calc(100vh - 131px);
 	width: 100%;
-	background-image: url(../images/lavender.jpg);
+	background-image: url(../images/lavender1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover; 
 	background-position: center;	
@@ -242,14 +242,14 @@ nav ul li:first-child a:hover {
 }
 .welcome-wrap {
 	position: absolute;
-	height: -webkit-calc(100vh - 135px);
-	height: calc(100vh - 135px);
+	height: -webkit-calc(100vh - 131px);
+	height: calc(100vh - 131px);
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 }
 .welcome h1 {
 	font-family: 'Charmonman', cursive;
-	font-size: 100px;
+	font-size: 90px;
 	color: #9595ea;	
 	text-transform: capitalize; 
 	text-shadow: 0px 0px 1px #222;	
@@ -258,10 +258,11 @@ nav ul li:first-child a:hover {
 	margin-top: -70px;
 }
 .welcome h2 {	
-	font-size: 50px;
-	margin: 30px 15px;
+	font-size: 48px;
+	margin: 20px 15px;
 	text-transform: uppercase;
 	color: #fff;
+	letter-spacing: 3px
 }
 .welcome p {
 	font-size: 40px;
@@ -270,7 +271,7 @@ nav ul li:first-child a:hover {
 }
 .welcome button.arrow-down {
 	position: absolute;
-	bottom: 10%;
+	bottom: 4%;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	    -ms-transform: translateX(-50%);
@@ -553,8 +554,8 @@ div.arrow {
 }
 @media(max-width: 1024px) {
 	.banner {					
-		height: -webkit-calc(100vh - 144px);					
-		height: calc(100vh - 144px);		
+		/*height: calc(100vh - 131px);		*/
+		height: 100vh;
 	}
 	.banner-text h1 {		
 		font-size: 42px;	
