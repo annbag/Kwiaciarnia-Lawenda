@@ -8,7 +8,7 @@ html {
 }
 /*nav*/
 nav {	
-	position: relative;
+	position: fixed;
 	top: 0;	
 	left: 0;
 	right: 0;	
@@ -184,13 +184,6 @@ nav ul li .btn-4:hover{
 		font-size: 20px;    	
 	}	
 }
-@media(max-width: 825px) and (orientation: landscape) {
-	/*nav ul li:first-child a {
-		margin: -55px;
-		padding: 10px;
-		transform: scale(0.4);
-	}*/
-}
 @media(max-width: 420px) and (orientation: portrait) {
 	nav ul {
 		height: 100vh;
@@ -208,7 +201,7 @@ nav ul li .btn-4:hover{
 .welcome {
 	position: relative;
 	max-width: 1280px;
-	margin: 0 auto;
+	margin: 80px auto 0;
 	height: -webkit-calc(100vh - 80px);
 	height: calc(100vh - 80px);
 	width: 100%;
@@ -391,6 +384,37 @@ nav ul li .btn-4:hover{
 		font-size: 40px;
 	}
 }
+/*about us*/
+.about-us {
+	position: relative;
+	top: 0;
+	left: 0;
+	max-width: 1280px;
+	margin: 0 auto;
+	height: 400px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+.about-us div.text {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;	
+}
+.about-us div.text h1, .about-us div.text p, .about-us img  {
+	margin: 50px;
+}
+.about-us div.text p {
+	line-height: 150%;
+}
+.about-us img {
+	-webkit-flex-basis: 50%;
+	    -ms-flex-preferred-size: 50%;
+	        flex-basis: 50%;
+}
+
 /*banner*/
 .banner {	 
 	position: relative;
