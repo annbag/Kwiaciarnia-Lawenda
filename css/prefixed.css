@@ -12,7 +12,7 @@ nav {
 	top: 0;	
 	left: 0;
 	right: 0;	
-	background-color: #222;			
+	background-color: rgba(13, 13, 13, 0.9);			
 	-webkit-transition: .3s;			
 	transition: .3s;
 	z-index: 2;
@@ -97,7 +97,13 @@ nav ul li .btn-4:hover{
 	}
 	nav ul li:first-child a {	
 		margin: 0;
-}
+	}
+	nav ul li.logo {
+		-webkit-box-flex: 0;
+		-webkit-flex-grow: 0;
+		    -ms-flex-positive: 0;
+		        flex-grow: 0;
+}	
 	.minilogo {
 		display: block;
 		position: relative;
@@ -207,19 +213,18 @@ nav ul li .btn-4:hover{
 	position: relative;
 	/*max-width: 1280px;*/
 	margin: 80px auto 0;
-	height: -webkit-calc(100vh - 80px);
-	height: calc(100vh - 80px);
+	height: 100vh;
 	width: 100%;
 	background-image: url(../images/lavender1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover; 
 	background-position: center;	
+	background-attachment: fixed;
 	text-align: center; 
 }
 .welcome-wrap {
 	position: absolute;
-	height: -webkit-calc(100vh - 80px);
-	height: calc(100vh - 80px);
+	height: 100vh;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.6);
 }
@@ -246,53 +251,6 @@ nav ul li .btn-4:hover{
 	color: #bfbff2;
 	text-transform: uppercase;	
 }
-.welcome button.arrow-down {
-	position: absolute;
-	bottom: 4%;
-	left: 50%;
-	-webkit-transform: translateX(-50%);
-	    -ms-transform: translateX(-50%);
-	        transform: translateX(-50%);
-	width: 40px;
-	height: 40px;
-	line-height: 40px;	
-	border-radius: 50%;
-	border-style: none;
-	font-size: 40px;
-	color: #fff;
-	background-color: rgba(0, 0, 0, 0.5);
-	cursor: pointer;
-	overflow: hidden;
-	-webkit-transition: .3s;
-	transition: .3s;
-}
-.welcome button.arrow-down:hover {
-	background-color: rgba(0, 0, 0, 0.7);
-}
-.welcome button.arrow-down:hover i {	
-	-webkit-animation: arrow 1s linear infinite both;	
-	        animation: arrow 1s linear infinite both;
-}
-@-webkit-keyframes arrow {
-	0% {
-		-webkit-transform: translateY(-50%);
-		        transform: translateY(-50%);
-	}
-	100% {
-		-webkit-transform: translateY(50%);
-		        transform: translateY(50%);
-	}
-}
-@keyframes arrow {
-	0% {
-		-webkit-transform: translateY(-50%);
-		        transform: translateY(-50%);
-	}
-	100% {
-		-webkit-transform: translateY(50%);
-		        transform: translateY(50%);
-	}
-}
 @media(max-width: 1024px) {
 	.welcome {
 		margin-top: 0;
@@ -315,10 +273,6 @@ nav ul li .btn-4:hover{
 	.welcome p {
 		font-size: 26px;
 	}
-	.welcome button.arrow-down:hover i {	
-		-webkit-animation: none;	
-		        animation: none;
-	}
 }
 @media(max-width: 825px) and (orientation: landscape) {
 	.welcome h1 {
@@ -335,13 +289,6 @@ nav ul li .btn-4:hover{
 	.welcome p {
 		font-size: 20px;
 	}
-	.welcome button.arrow-down {
-		bottom: 5%;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;	
-		font-size: 40px;
-	}
 }
 @media(max-width: 540px) and (orientation: landscape) {
 	.welcome h1 {
@@ -355,13 +302,6 @@ nav ul li .btn-4:hover{
 	}
 	.welcome p {
 		font-size: 18px;
-	}
-	.welcome button.arrow-down {
-		bottom: 5%;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;	
-		font-size: 40px;
 	}
 }
 @media(max-width: 420px) and (orientation: portrait) {
@@ -381,13 +321,6 @@ nav ul li .btn-4:hover{
 	.welcome p {
 		margin-top: 50px;
 		font-size: 20px;
-	}
-	.welcome button.arrow-down {
-		bottom: 5%;
-		width: 40px;
-		height: 40px;
-		line-height: 40px;	
-		font-size: 40px;
 	}
 }
 /*about us*/
@@ -495,8 +428,7 @@ nav ul li .btn-4:hover{
 	/*max-width: 1280px;*/
 	/*margin: 0 auto;*/
 	width: 100%;
-	height: -webkit-calc(100vh - 80px);
-	height: calc(100vh - 80px);
+	height: 100vh;
 	overflow: hidden;		
 }
 .banner-image img {	
@@ -974,7 +906,7 @@ div.arrow {
 
 
 footer {
-	background-color: #222;	
+	background-color: rgba(13, 13, 13, 0.9);	
 	text-align: center;
 }
 footer p {

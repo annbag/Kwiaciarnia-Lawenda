@@ -4,7 +4,27 @@ document.querySelector('.burger').addEventListener('click', function() {
 	this.classList.toggle('active');
 	nav.classList.toggle('active');	
 });
-
+//scroling menu
+$('.btn-1').on('click', function () {
+	$('body, html').animate({
+		scrollTop: $('.welcome').offset().top
+	}, 500)
+})
+$('.btn-2').on('click', function () {
+	$('body, html').animate({
+		scrollTop: $('.banner').offset().top
+	}, 500)
+})
+$('.btn-3').on('click', function () {
+	$('body, html').animate({
+		scrollTop: $('.gallery').offset().top
+	}, 500)
+})
+$('.btn-4').on('click', function () {
+	$('body, html').animate({
+		scrollTop: $('.contact').offset().top
+	}, 500)
+})
 // banner
 let activeElement = 0;
 let timeChange = 4000;
@@ -54,17 +74,13 @@ arrowLeftHtml.addEventListener('click', function() {
 ) 
 
 //add map
- // key = AIzaSyCZOytnsAe0CMjJyQHkTPL4-XmxheZHHCQ;
 function initMap () {
-  // Lokalizacja miejsca
   const place = {lat: 52.742879, lng: 23.583948};
-  // Mapa, skupiona na kwiaciarni
   var map = new google.maps.Map(
       document.getElementById('map'), {
       	zoom: 15, 
       	center: place
       });
-  // Znacznik, umieszczony na kwiaciarni
   var marker = new google.maps.Marker({
   	position: place, 
   	map: map
