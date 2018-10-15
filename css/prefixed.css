@@ -13,7 +13,7 @@ nav {
 	left: 0;
 	right: 0;	
 	background-color: #222;			
-	box-shadow: 0 4px 10px -2px #aaa;
+	/*box-shadow: 0 4px 10px -2px #aaa;*/
 	-webkit-transition: .3s;
 	transition: .3s;
 	z-index: 2;
@@ -200,7 +200,7 @@ nav ul li .btn-4:hover{
 /*header*/
 .welcome {
 	position: relative;
-	max-width: 1280px;
+	/*max-width: 1280px;*/
 	margin: 80px auto 0;
 	height: -webkit-calc(100vh - 80px);
 	height: calc(100vh - 80px);
@@ -425,9 +425,6 @@ nav ul li .btn-4:hover{
 		margin: 30px 50px;
 	}
 }
-@media (max-width: 768px) and (orientation: portrait) {}
-@media (max-width: 425px) and (orientation: portrait) {}
-
 @media(max-width: 820px) and (orientation: landscape) {
 	.about-us {		
 		height: 100vh;
@@ -490,8 +487,8 @@ nav ul li .btn-4:hover{
 /*banner*/
 .banner {	 
 	position: relative;
-	max-width: 1280px;
-	margin: 0 auto;
+	/*max-width: 1280px;*/
+	/*margin: 0 auto;*/
 	width: 100%;
 	height: -webkit-calc(100vh - 80px);
 	height: calc(100vh - 80px);
@@ -738,29 +735,9 @@ div.arrow {
 	margin: -10px 15px 0;
 	background-color: #eee;	
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*contact*/
 .contact {
-	max-width: 1280px;
+	/*max-width: 1280px;*/
 	margin: 0 auto;
 	display: -ms-flexbox;
 	display: -webkit-box;
