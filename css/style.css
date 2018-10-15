@@ -695,7 +695,17 @@ div.arrow {
 	-ms-flex-preferred-size: 60%;
 	    flex-basis: 60%;
 	background-color: #555;	
+	position: relative;
+	left: 0;
+	top: 0;
 } 
+.contact .map div#map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 80vh;
+}
 @media (max-width: 1024px) {
 	.contact .information .wrap {
 		padding: 0 15px;

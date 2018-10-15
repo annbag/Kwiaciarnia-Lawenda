@@ -54,18 +54,19 @@ arrowLeftHtml.addEventListener('click', function() {
 ) 
 
 //add map
-// function initMap () {
-//   // Lokalizacja Uluru
-//   const uluru = {lat: 52.742879, lng: 23.583948};
-//   // Mapa, skupiona na Uluru
-//   var map = new google.maps.Map (
-//       document.getElementById('map'), {
-//       	zoom: 4, 
-//       	center: uluru
-//       });
-//   // Znacznik, umieszczony w Uluru
-//   var marker = new google.maps.Marker({
-//   	position: uluru, 
-//   	map: map
-//   });
-// }
+ // key = AIzaSyCZOytnsAe0CMjJyQHkTPL4-XmxheZHHCQ;
+function initMap () {
+  // Lokalizacja miejsca
+  const place = {lat: 52.742879, lng: 23.583948};
+  // Mapa, skupiona na kwiaciarni
+  var map = new google.maps.Map(
+      document.getElementById('map'), {
+      	zoom: 15, 
+      	center: place
+      });
+  // Znacznik, umieszczony na kwiaciarni
+  var marker = new google.maps.Marker({
+  	position: place, 
+  	map: map
+  });
+}
