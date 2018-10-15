@@ -21,9 +21,10 @@ document.querySelector('.burger').addEventListener('click', function() {
 	// btn1.addEventListener('click', function() {
 	// 	beginningWelcome.scrollTop()
 	// 	})
+// window.addEventListener('click', clickButton)
 
 
-window.addEventListener('click', clickButton)
+
 $('.btn-1').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('.welcome').offset().top
