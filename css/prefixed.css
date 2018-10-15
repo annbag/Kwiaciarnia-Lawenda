@@ -13,8 +13,7 @@ nav {
 	left: 0;
 	right: 0;	
 	background-color: #222;			
-	/*box-shadow: 0 4px 10px -2px #aaa;*/
-	-webkit-transition: .3s;
+	-webkit-transition: .3s;			
 	transition: .3s;
 	z-index: 2;
 }
@@ -22,11 +21,11 @@ nav ul {
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: flex;	
-  -ms-flex-pack: end;	
-      -webkit-box-pack: end;	
-      -webkit-justify-content: flex-end;	
-          justify-content: flex-end;
+	display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 	max-width: 1280px;
 	margin: 0 auto;
 	height: 80px;
@@ -35,14 +34,20 @@ nav ul {
 	overflow: hidden;
 }
 nav ul li {
-	-ms-flex-preferred-size: 15%;
-	    -webkit-flex-basis: 15%;
-	        flex-basis: 15%;	
-	-ms-flex-item-align: center;	
-	    -ms-grid-row-align: center;	
-	    -webkit-align-self: center;	
+	-webkit-flex-basis: 10%;
+	    -ms-flex-preferred-size: 10%;
+	        flex-basis: 10%;
+	-webkit-align-self: center;
+	    -ms-flex-item-align: center;
+	            -ms-grid-row-align: center;
 	        align-self: center;
   display: inline-block;
+}
+nav ul li.logo {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	    -ms-flex-positive: 1;
+	        flex-grow: 1;
 }
 nav ul li a {	
 	display: block;
@@ -55,12 +60,12 @@ nav ul li a {
 	letter-spacing: 2px;
 	-webkit-transition: .3s;
 	transition: .3s;	
-	margin: 0 10px;  	
+	margin: 0;  	
 	box-sizing: content-box;
 }
 nav ul li:first-child a {
 	padding: 0;	
-	margin-left: -400px;
+	/*margin-left: -450px;*/
 }
 nav ul li .btn-1:hover {
 	color: #c4bdff;
@@ -393,14 +398,14 @@ nav ul li .btn-4:hover{
 	max-width: 1280px;
 	margin: 0 auto;
 	height: 400px;
+	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 }
 .about-us div.text {	
-	-webkit-flex-basis: 60%;	
-	    -ms-flex-preferred-size: 60%;	
+	-ms-flex-preferred-size: 60%;	
+	    -webkit-flex-basis: 60%;	
 	        flex-basis: 60%;
 }
 .about-us div.text h1, .about-us div.text p, .about-us div.image  {
@@ -411,9 +416,9 @@ nav ul li .btn-4:hover{
 	text-align: justify;
 }
 .about-us div.image {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
+  -ms-flex-positive: 1;
+      -webkit-box-flex: 1;
+      -webkit-flex-grow: 1;
           flex-grow: 1;	
   background-image: url(../images/5.jpg);
   background-repeat: no-repeat;
@@ -444,16 +449,16 @@ nav ul li .btn-4:hover{
 }
 @media(max-width: 820px) and (orientation: portrait) {
 	.about-us {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
+		-ms-flex-direction: column;
+		    -webkit-box-orient: vertical;
+		    -webkit-box-direction: normal;
+		    -webkit-flex-direction: column;
 		        flex-direction: column;
 		height: 80vh;
 	}
 	.about-us div.text {	
-		-webkit-flex-basis: 40%;	
-		    -ms-flex-preferred-size: 40%;	
+		-ms-flex-preferred-size: 40%;	
+		    -webkit-flex-basis: 40%;	
 		        flex-basis: 40%;
 	}
 	.about-us div.image {
@@ -534,7 +539,7 @@ div.arrow {
 	-webkit-transform: translateY(-50%);
 	    -ms-transform: translateY(-50%);
 	        transform: translateY(-50%);
-	font-size: 60px;
+	font-size: 44px;
 	color: #fff;
 	z-index: 1;
 	cursor: pointer;
@@ -663,7 +668,7 @@ div.arrow {
 }
 @media(max-width: 640px) {
 	div.arrow {	
-		font-size: 50px;
+		font-size: 34px;
 	}
 	.arrow-left {	
 		margin-left: 20px;
@@ -693,16 +698,16 @@ div.arrow {
 	text-transform: uppercase;
 }
 .gallery .album {
+	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	    -webkit-flex-wrap: wrap;
 	        flex-wrap: wrap;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	    -ms-flex-pack: center;
+	-ms-flex-pack: center;
+	    -webkit-box-pack: center;
+	    -webkit-justify-content: center;
 	        justify-content: center;
 }
 .gallery .album a img {
@@ -959,7 +964,7 @@ div.arrow {
 
 
 footer {
-	background-color: #333;	
+	background-color: #222;	
 	text-align: center;
 }
 footer p {
