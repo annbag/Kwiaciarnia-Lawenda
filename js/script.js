@@ -4,27 +4,7 @@ document.querySelector('.burger').addEventListener('click', function() {
 	this.classList.toggle('active');
 	nav.classList.toggle('active');	
 });
-//scroling menu
-
-	// const btn1 = document.querySelector('.btn-1');
-	// const btn2 = document.querySelector('.btn-2');
-	// const btn3 = document.querySelector('.btn-3');
-	// const btn4 = document.querySelector('.btn-4');
-	// const btn5 = document.querySelector('.btn-5');
-
-	// const beginningWelcome = document.querySelector('.welcome').offsetTop;
-	// const beginningAboutUs = document.querySelector('.about-us').offsetTop;
-	// const beginningBanner = document.querySelector('.banner').offsetTop;
-	// const beginningGallery = document.querySelector('.gallery').offsetTop;
-	// const beginningContact = document.querySelector('.contact').offsetTop;
-
-	// btn1.addEventListener('click', function() {
-	// 	beginningWelcome.scrollTop()
-	// 	})
-// window.addEventListener('click', clickButton)
-
-
-
+//click button in nav
 $('.btn-1').on('click', function () {
 	$('body, html').animate({
 		scrollTop: $('.welcome').offset().top
@@ -79,11 +59,12 @@ function changeColor() {
 		btn3.style.removeProperty('color');
 		btn4.style.removeProperty('color');
 		btn5.style.removeProperty('color');
+		// nav.classList.remove('active')
 	}
 	else if(sizeScroll < heightAboutUs + beginningAboutUs) {
 		btn2.style.color = "#957bff";
 		btn1.style.removeProperty('color');	
-		btn3.style.removeProperty('color');	
+		btn3.style.removeProperty('color');		
 	}
 	else if(sizeScroll < heightBanner + beginningBanner) {
 		btn3.style.color = "#7449ff";

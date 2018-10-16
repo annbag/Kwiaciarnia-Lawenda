@@ -78,12 +78,11 @@ nav ul li .btn-5:hover{
 @media(max-width: 1024px) {
 	nav {	
 		position: fixed;
-		opacity: 0;
+		top: -100vh;
 		transition: .3s;
 	}
 	nav ul {		
-	  -ms-flex-pack: center;		
-	      justify-content: center;
+	  justify-content: center;
 	}
 	nav ul li:first-child a {	
 		margin: 0;
@@ -142,7 +141,7 @@ nav ul li .btn-5:hover{
 		transform: rotate(-90deg);
 	}
 	nav.active {
-		opacity: 1;
+		top: 0;
 	}
 }
 @media(max-width: 870px) {
@@ -152,10 +151,6 @@ nav ul li .btn-5:hover{
 	}
 	.burger span {
 	 	height: 6px;
-	}
-	nav {		
-	 	opacity: 0;	
-	 	height: 100vh;
 	}
 	nav ul {
 		-ms-flex-direction: column;
@@ -176,14 +171,10 @@ nav ul li .btn-5:hover{
 		padding: 12px;
 		font-size: 18px;	  			  	
 	}
-	nav {		
-	 	opacity: 0;	
-	}
 }
 /*header*/
 .welcome {
 	position: relative;
-	/*max-width: 1280px;*/
 	margin: 80px auto 0;
 	height: 100vh;
 	width: 100%;
@@ -386,8 +377,6 @@ nav ul li .btn-5:hover{
 /*banner*/
 .banner {	 
 	position: relative;
-	/*max-width: 1280px;*/
-	/*margin: 0 auto;*/
 	width: 100%;
 	height: 100vh;
 	overflow: hidden;		
@@ -539,12 +528,9 @@ div.arrow {
 	text-transform: uppercase;
 }
 .gallery .album {
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-wrap: wrap;
-	    flex-wrap: wrap;
-	-ms-flex-pack: center;
-	    justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .gallery .album a img {
 	margin: 30px 15px 5px;
@@ -575,9 +561,6 @@ div.arrow {
 }
 /*contact*/
 .contact {
-	/*max-width: 1280px;*/
-	margin: 0 auto;
-	display: -ms-flexbox;
 	display: flex;
 	height: calc(100vh - 64px);	
 	color: #fff;
@@ -586,12 +569,9 @@ div.arrow {
 	position: relative;
 	top: 0;
 	left: 0;
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
+	flex-direction: column;
+	flex-grow: 1;
 	background-image: url(../images/4.jpg);
 	background-repeat: no-repeat;	
 	background-position: center;
@@ -601,10 +581,8 @@ div.arrow {
 	position: absolute;
 	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-direction: column;
-	    flex-direction: column;
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
+	flex-direction: column;
+	flex-grow: 1;
 	width: 100%;
 	height: calc(100vh - 64px);
 	padding: 0 30px;
@@ -619,22 +597,18 @@ div.arrow {
 	letter-spacing: 2px;
 }
 .contact .information .info {
-	display: -ms-flexbox;
 	display: flex;
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
+	flex-grow: 1;
 	padding: 10px;
 }
 .contact .information .info .contact-icon {
-	-ms-flex-preferred-size: 20%;
-	    flex-basis: 20%;
+	flex-basis: 20%;
 	text-align: center;
 	font-size: 30px;
 	color: #9595ea;
 }
 .contact .information .info .text {
-	-ms-flex-positive: 1;
-	    flex-grow: 1;
+	flex-grow: 1;
 	font-size: 16px;	
 }
 .contact .information .info .text p.title {
@@ -644,8 +618,7 @@ div.arrow {
 	letter-spacing: 2px;
 }
 .contact .map {
-	-ms-flex-preferred-size: 60%;
-	    flex-basis: 60%;
+	flex-basis: 60%;
 	background-color: #555;	
 	position: relative;
 	left: 0;
@@ -677,22 +650,20 @@ div.arrow {
 }
 @media (max-width: 870px) {
 	.contact {
-		-ms-flex-direction: column;
-		    flex-direction: column;
+    flex-direction: column;
 		height: 100vh;
 	}
 	.contact .information .info {
-		display: -ms-flexbox;
 		display: flex;
-		-ms-flex-direction: column;
-		    flex-direction: column;
-		-ms-flex-align: center;
-		    align-items: center;
+		flex-direction: column;
+		align-items: center;
 		text-align: center;
 	}
 	.contact .map {
-		-ms-flex-preferred-size: 30%;
-		    flex-basis: 30%;
+    flex-basis: 30%;
+	}
+	.contact .map div#map {
+		height: 30vh;
 	}
 }
 @media (max-width: 870px) and (orientation: landscape){
@@ -700,8 +671,10 @@ div.arrow {
 		height: 200vh;
 	}
 	.contact .map {
-		-ms-flex-preferred-size: 50%;
-		    flex-basis: 50%;
+	  flex-basis: 50%;
+	}
+	.contact .map div#map {
+		height: 100vh;
 	}
 	.contact .information .wrap {
 		height: 100vh;
@@ -751,8 +724,10 @@ div.arrow {
 		height: 150vh;
 	}
 	.contact .map {
-		-ms-flex-preferred-size: 50vh;
-		    flex-basis: 50vh;
+    flex-basis: 50vh;
+	}
+	.contact .map div#map {
+		height: 50vh;
 	}
 	.contact .information .wrap {
 		height: 100vh;
@@ -767,8 +742,6 @@ div.arrow {
 		font-size: 16px;	
 	}
 }
-
-
 footer {
 	background-color: rgba(13, 13, 13, 0.9);	
 	text-align: center;
