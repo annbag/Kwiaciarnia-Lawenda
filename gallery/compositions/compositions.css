@@ -6,19 +6,18 @@
 html {
 	font-family: 'Roboto', sans-serif;
 }
-section.gallery {
+.gallery {
 	max-width: 1280px;
 	margin: 50px auto;
 }
-.title {
-	margin: 0 auto;
+.gallery .title {	
 	text-align: center;
 }
-.title h1 {
+.gallery .title h1 {
 	text-transform: uppercase;
 	margin: 20px;
 }
-.title a.btn {
+.gallery .title a.btn {
 	display: inline-block;
 	margin: 15px 0;
 	padding: 10px 20px;
@@ -32,15 +31,15 @@ section.gallery {
 	transition: .3s;
 	cursor: pointer;
 }
-section.images {
+.gallery .images {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.images a img {
+.gallery .images a img {
 	margin: 20px 8px;
+	transition: .3s;
 }
-.images a img:hover {
+.gallery .images a img:hover {
 	opacity: 0.6;
 }
