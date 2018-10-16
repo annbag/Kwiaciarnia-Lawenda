@@ -187,7 +187,7 @@ nav ul li .btn-5:hover{
 .welcome h1 {
 	font-family: 'La Belle Aurore', cursive;;
 	font-size: 70px;
-	margin-top: 30px;
+	margin-top: 80px;
 	color: #9595ea;	
 	text-transform: capitalize; 
 	text-shadow: 0px 0px 1px #222;	
@@ -286,7 +286,7 @@ nav ul li .btn-5:hover{
 	left: 0;
 	max-width: 1280px;
 	margin: 0 auto;
-	height: 400px;
+	height: 500px;
 	display: -ms-flexbox;
 	display: flex;
 }
@@ -294,7 +294,10 @@ nav ul li .btn-5:hover{
 	-ms-flex-preferred-size: 60%;	
 	    flex-basis: 60%;
 }
-.about-us div.text h1, .about-us div.text p, .about-us div.image  {
+.about-us div.text h1 {
+	margin: 80px 50px 50px;
+} 
+.about-us div.text p, .about-us div.image  {
 	margin: 50px;
 }
 .about-us div.text p {
@@ -310,7 +313,7 @@ nav ul li .btn-5:hover{
   background-size: cover;
 }
 @media(max-width: 1024px) {
-	.about-us div.text h1, .about-us div.text p {
+	.about-us div.text p {
 		margin: 30px 50px;
 	}
 }
@@ -335,17 +338,20 @@ nav ul li .btn-5:hover{
 	.about-us {
 		-ms-flex-direction: column;
 		    flex-direction: column;
-		height: 80vh;
+		height: 100vh;		
 	}
 	.about-us div.text {	
 		-ms-flex-preferred-size: 40%;	
 		    flex-basis: 40%;
 	}
+	.about-us div.text h1 {
+		margin: 100px 50px 50px;
+	} 
 	.about-us div.image {
 		position: relative; 
 		top: 0;
 		left: 50%;
-		margin: 20px 0;
+		margin: 40px 0;
 		transform: translateX(-50%);
 		width: 400px;
 	}
@@ -365,8 +371,6 @@ nav ul li .btn-5:hover{
 		width: 200px;
 	}
 }
-
-
 /*banner*/
 .banner {	 
 	position: relative;
@@ -512,11 +516,11 @@ div.arrow {
 /*gallery*/
 .gallery {
 	max-width: 1280px;
-	margin: 50px auto;
+	margin: 60px auto;
 }
 .gallery h1 {
 	text-align: center;
-	margin-bottom: 20px;
+	margin: 80px 0 20px;
 	font-size: 28px;
 	text-transform: uppercase;
 }
@@ -528,7 +532,7 @@ div.arrow {
   -ms-flex-pack: center;
       justify-content: center;
 }
-.gallery .album a img {
+.gallery .album img {
 	margin: 30px 15px 5px;
 }
 .gallery .album p {
@@ -552,6 +556,9 @@ div.arrow {
 	letter-spacing: 2px;
 	transition: .3s;
 	cursor: pointer;
+}
+.gallery .album a.btn-gallery:hover {
+	background-image: linear-gradient(#9595ea, #bab6ff);
 }
 .gallery .album .caption {	
 	margin: -10px 15px 0;

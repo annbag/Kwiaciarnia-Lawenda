@@ -58,8 +58,11 @@ footer p {
   flex-wrap: wrap;
   justify-content: center;
 }
+.gallery .images a {
+	align-self: center;
+}
 .gallery .images a img {
-	margin: 20px 8px;
+	margin: 40px;
 	transition: .3s;
 }
 .gallery .images a img:hover {

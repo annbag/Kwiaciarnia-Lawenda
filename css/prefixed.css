@@ -82,9 +82,6 @@ nav ul li .btn-4:hover{
 nav ul li .btn-5:hover{
   color: #421eb2;
 }	
-.minilogo {
-	display: none;
-}
 @media(max-width: 1024px) {
 	nav {	
 		position: fixed;
@@ -93,27 +90,21 @@ nav ul li .btn-5:hover{
 		transition: .3s;
 	}
 	nav ul {		
-	  -webkit-box-pack: center;		
-	  -webkit-justify-content: center;		
-	      -ms-flex-pack: center;		
+	  -ms-flex-pack: center;		
+	      -webkit-box-pack: center;		
+	      -webkit-justify-content: center;		
 	          justify-content: center;
 	}
 	nav ul li:first-child a {	
 		margin: 0;
 	}
 	nav ul li.logo {
-		-webkit-box-flex: 0;
-		-webkit-flex-grow: 0;
-		    -ms-flex-positive: 0;
+		-ms-flex-positive: 0;
+		    -webkit-box-flex: 0;
+		    -webkit-flex-grow: 0;
 		        flex-grow: 0;
-}	
-	.minilogo {
-		display: block;
-		position: relative;
-		top: 0;
-		left: 0;	
-		padding: 5px 0 1px 35px;	
 	}
+
 	.burger {		
 	 	position: fixed;
 		display: block;
@@ -226,7 +217,7 @@ nav ul li .btn-5:hover{
 .welcome h1 {
 	font-family: 'La Belle Aurore', cursive;;
 	font-size: 70px;
-	margin-top: 30px;
+	margin-top: 80px;
 	color: #9595ea;	
 	text-transform: capitalize; 
 	text-shadow: 0px 0px 1px #222;	
@@ -325,7 +316,7 @@ nav ul li .btn-5:hover{
 	left: 0;
 	max-width: 1280px;
 	margin: 0 auto;
-	height: 400px;
+	height: 500px;
 	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -336,7 +327,10 @@ nav ul li .btn-5:hover{
 	    -webkit-flex-basis: 60%;	
 	        flex-basis: 60%;
 }
-.about-us div.text h1, .about-us div.text p, .about-us div.image  {
+.about-us div.text h1 {
+	margin: 80px 50px 50px;
+} 
+.about-us div.text p, .about-us div.image  {
 	margin: 50px;
 }
 .about-us div.text p {
@@ -354,7 +348,7 @@ nav ul li .btn-5:hover{
   background-size: cover;
 }
 @media(max-width: 1024px) {
-	.about-us div.text h1, .about-us div.text p {
+	.about-us div.text p {
 		margin: 30px 50px;
 	}
 }
@@ -382,18 +376,21 @@ nav ul li .btn-5:hover{
 		    -webkit-box-direction: normal;
 		    -webkit-flex-direction: column;
 		        flex-direction: column;
-		height: 80vh;
+		height: 100vh;		
 	}
 	.about-us div.text {	
 		-ms-flex-preferred-size: 40%;	
 		    -webkit-flex-basis: 40%;	
 		        flex-basis: 40%;
 	}
+	.about-us div.text h1 {
+		margin: 100px 50px 50px;
+	} 
 	.about-us div.image {
 		position: relative; 
 		top: 0;
 		left: 50%;
-		margin: 20px 0;
+		margin: 40px 0;
 		-webkit-transform: translateX(-50%);
 		    -ms-transform: translateX(-50%);
 		        transform: translateX(-50%);
@@ -415,8 +412,6 @@ nav ul li .btn-5:hover{
 		width: 200px;
 	}
 }
-
-
 /*banner*/
 .banner {	 
 	position: relative;
@@ -614,28 +609,28 @@ div.arrow {
 /*gallery*/
 .gallery {
 	max-width: 1280px;
-	margin: 50px auto;
+	margin: 60px auto;
 }
 .gallery h1 {
 	text-align: center;
-	margin-bottom: 20px;
+	margin: 80px 0 20px;
 	font-size: 28px;
 	text-transform: uppercase;
 }
 .gallery .album {
+	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      -webkit-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
+  -ms-flex-pack: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
           justify-content: center;
 }
-.gallery .album a img {
+.gallery .album img {
 	margin: 30px 15px 5px;
 }
 .gallery .album p {
@@ -643,8 +638,9 @@ div.arrow {
 	text-align: center;
 	text-transform: uppercase;
 }
-.gallery .album button {
+.gallery .album a.btn-gallery {
 	position: relative;
+	display: inline-block;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	    -ms-transform: translateX(-50%);
@@ -656,10 +652,15 @@ div.arrow {
 	border-radius: 6px;
 	color: #fff;
 	text-transform: uppercase;
+	text-decoration: none;
 	letter-spacing: 2px;
 	-webkit-transition: .3s;
 	transition: .3s;
 	cursor: pointer;
+}
+.gallery .album a.btn-gallery:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#9595ea), to(#bab6ff));
+	background-image: linear-gradient(#9595ea, #bab6ff);
 }
 .gallery .album .caption {	
 	margin: -10px 15px 0;
@@ -667,9 +668,9 @@ div.arrow {
 }
 /*contact*/
 .contact {
+	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
 	height: -webkit-calc(100vh - 64px);
 	height: calc(100vh - 64px);	
@@ -679,18 +680,18 @@ div.arrow {
 	position: relative;
 	top: 0;
 	left: 0;
+	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
+	-ms-flex-direction: column;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-direction: column;
 	        flex-direction: column;
-	-webkit-box-flex: 1;
-	-webkit-flex-grow: 1;
-	    -ms-flex-positive: 1;
+	-ms-flex-positive: 1;
+	    -webkit-box-flex: 1;
+	    -webkit-flex-grow: 1;
 	        flex-grow: 1;
 	background-image: url(../images/4.jpg);
 	background-repeat: no-repeat;	
@@ -703,14 +704,14 @@ div.arrow {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-webkit-flex-direction: column;
-	    -ms-flex-direction: column;
+	-ms-flex-direction: column;
+	    -webkit-box-orient: vertical;
+	    -webkit-box-direction: normal;
+	    -webkit-flex-direction: column;
 	        flex-direction: column;
-	-webkit-box-flex: 1;
-	-webkit-flex-grow: 1;
-	    -ms-flex-positive: 1;
+	-ms-flex-positive: 1;
+	    -webkit-box-flex: 1;
+	    -webkit-flex-grow: 1;
 	        flex-grow: 1;
 	width: 100%;
 	height: -webkit-calc(100vh - 64px);
@@ -727,28 +728,28 @@ div.arrow {
 	letter-spacing: 2px;
 }
 .contact .information .info {
+	display: -ms-flexbox;
 	display: -webkit-box;
 	display: -webkit-flex;
-	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-flex: 1;
-	-webkit-flex-grow: 1;
-	    -ms-flex-positive: 1;
+	-ms-flex-positive: 1;
+	    -webkit-box-flex: 1;
+	    -webkit-flex-grow: 1;
 	        flex-grow: 1;
 	padding: 10px;
 }
 .contact .information .info .contact-icon {
-	-webkit-flex-basis: 20%;
-	    -ms-flex-preferred-size: 20%;
+	-ms-flex-preferred-size: 20%;
+	    -webkit-flex-basis: 20%;
 	        flex-basis: 20%;
 	text-align: center;
 	font-size: 30px;
 	color: #9595ea;
 }
 .contact .information .info .text {
-	-webkit-box-flex: 1;
-	-webkit-flex-grow: 1;
-	    -ms-flex-positive: 1;
+	-ms-flex-positive: 1;
+	    -webkit-box-flex: 1;
+	    -webkit-flex-grow: 1;
 	        flex-grow: 1;
 	font-size: 16px;	
 }
@@ -759,8 +760,8 @@ div.arrow {
 	letter-spacing: 2px;
 }
 .contact .map {
-	-webkit-flex-basis: 60%;
-	    -ms-flex-preferred-size: 60%;
+	-ms-flex-preferred-size: 60%;
+	    -webkit-flex-basis: 60%;
 	        flex-basis: 60%;
 	background-color: #555;	
 	position: relative;
@@ -794,32 +795,32 @@ div.arrow {
 }
 @media (max-width: 870px) {
 	.contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
             flex-direction: column;
 		height: 100vh;
 	}
 	.contact .information .info {
+		display: -ms-flexbox;
 		display: -webkit-box;
 		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		-webkit-flex-direction: column;
-		    -ms-flex-direction: column;
+		-ms-flex-direction: column;
+		    -webkit-box-orient: vertical;
+		    -webkit-box-direction: normal;
+		    -webkit-flex-direction: column;
 		        flex-direction: column;
-		-webkit-box-align: center;
-		-webkit-align-items: center;
-		    -ms-flex-align: center;
+		-ms-flex-align: center;
+		    -webkit-box-align: center;
+		    -webkit-align-items: center;
 		        align-items: center;
 		text-align: center;
 	}
 	.contact .map {
-    -webkit-flex-basis: 30%;
-        -ms-flex-preferred-size: 30%;
+    -ms-flex-preferred-size: 30%;
+        -webkit-flex-basis: 30%;
             flex-basis: 30%;
 	}
 	.contact .map div#map {
@@ -831,8 +832,8 @@ div.arrow {
 		height: 200vh;
 	}
 	.contact .map {
-	  -webkit-flex-basis: 50%;
-	      -ms-flex-preferred-size: 50%;
+	  -ms-flex-preferred-size: 50%;
+	      -webkit-flex-basis: 50%;
 	          flex-basis: 50%;
 	}
 	.contact .map div#map {
@@ -886,8 +887,8 @@ div.arrow {
 		height: 150vh;
 	}
 	.contact .map {
-    -webkit-flex-basis: 50vh;
-        -ms-flex-preferred-size: 50vh;
+    -ms-flex-preferred-size: 50vh;
+        -webkit-flex-basis: 50vh;
             flex-basis: 50vh;
 	}
 	.contact .map div#map {
