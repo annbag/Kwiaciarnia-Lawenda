@@ -72,9 +72,6 @@ nav ul li .btn-4:hover{
 nav ul li .btn-5:hover{
   color: #421eb2;
 }	
-.minilogo {
-	display: none;
-}
 @media(max-width: 1024px) {
 	nav {	
 		position: fixed;
@@ -82,21 +79,17 @@ nav ul li .btn-5:hover{
 		transition: .3s;
 	}
 	nav ul {		
-	  justify-content: center;
+	  -ms-flex-pack: center;		
+	      justify-content: center;
 	}
 	nav ul li:first-child a {	
 		margin: 0;
 	}
 	nav ul li.logo {
-		flex-grow: 0;
-}	
-	.minilogo {
-		display: block;
-		position: relative;
-		top: 0;
-		left: 0;	
-		padding: 5px 0 1px 35px;	
+		-ms-flex-positive: 0;
+		    flex-grow: 0;
 	}
+
 	.burger {		
 	 	position: fixed;
 		display: block;
@@ -528,9 +521,12 @@ div.arrow {
 	text-transform: uppercase;
 }
 .gallery .album {
+	display: -ms-flexbox;
 	display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .gallery .album a img {
 	margin: 30px 15px 5px;
@@ -540,8 +536,9 @@ div.arrow {
 	text-align: center;
 	text-transform: uppercase;
 }
-.gallery .album button {
+.gallery .album a.btn-gallery {
 	position: relative;
+	display: inline-block;
 	left: 50%;
 	transform: translateX(-50%);
 	margin: 15px 0;
@@ -551,6 +548,7 @@ div.arrow {
 	border-radius: 6px;
 	color: #fff;
 	text-transform: uppercase;
+	text-decoration: none;
 	letter-spacing: 2px;
 	transition: .3s;
 	cursor: pointer;
@@ -561,6 +559,7 @@ div.arrow {
 }
 /*contact*/
 .contact {
+	display: -ms-flexbox;
 	display: flex;
 	height: calc(100vh - 64px);	
 	color: #fff;
@@ -569,9 +568,12 @@ div.arrow {
 	position: relative;
 	top: 0;
 	left: 0;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
 	background-image: url(../images/4.jpg);
 	background-repeat: no-repeat;	
 	background-position: center;
@@ -581,8 +583,10 @@ div.arrow {
 	position: absolute;
 	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
 	width: 100%;
 	height: calc(100vh - 64px);
 	padding: 0 30px;
@@ -597,18 +601,22 @@ div.arrow {
 	letter-spacing: 2px;
 }
 .contact .information .info {
+	display: -ms-flexbox;
 	display: flex;
-	flex-grow: 1;
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
 	padding: 10px;
 }
 .contact .information .info .contact-icon {
-	flex-basis: 20%;
+	-ms-flex-preferred-size: 20%;
+	    flex-basis: 20%;
 	text-align: center;
 	font-size: 30px;
 	color: #9595ea;
 }
 .contact .information .info .text {
-	flex-grow: 1;
+	-ms-flex-positive: 1;
+	    flex-grow: 1;
 	font-size: 16px;	
 }
 .contact .information .info .text p.title {
@@ -618,7 +626,8 @@ div.arrow {
 	letter-spacing: 2px;
 }
 .contact .map {
-	flex-basis: 60%;
+	-ms-flex-preferred-size: 60%;
+	    flex-basis: 60%;
 	background-color: #555;	
 	position: relative;
 	left: 0;
@@ -650,17 +659,22 @@ div.arrow {
 }
 @media (max-width: 870px) {
 	.contact {
-    flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
 		height: 100vh;
 	}
 	.contact .information .info {
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		align-items: center;
+		-ms-flex-direction: column;
+		    flex-direction: column;
+		-ms-flex-align: center;
+		    align-items: center;
 		text-align: center;
 	}
 	.contact .map {
-    flex-basis: 30%;
+    -ms-flex-preferred-size: 30%;
+        flex-basis: 30%;
 	}
 	.contact .map div#map {
 		height: 30vh;
@@ -671,7 +685,8 @@ div.arrow {
 		height: 200vh;
 	}
 	.contact .map {
-	  flex-basis: 50%;
+	  -ms-flex-preferred-size: 50%;
+	      flex-basis: 50%;
 	}
 	.contact .map div#map {
 		height: 100vh;
@@ -724,7 +739,8 @@ div.arrow {
 		height: 150vh;
 	}
 	.contact .map {
-    flex-basis: 50vh;
+    -ms-flex-preferred-size: 50vh;
+        flex-basis: 50vh;
 	}
 	.contact .map div#map {
 		height: 50vh;
