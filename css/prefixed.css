@@ -356,17 +356,23 @@ nav ul li .btn-5:hover{
 	.about-us {		
 		height: 100vh;
 	}
+	.about-us div.text h1 {
+		margin: 50px;
+	}
+	.about-us div.text p {
+		margin: 20px 20px 20px 50px; 
+	}
 }
 @media(max-width: 670px) and (orientation: landscape) {
 	.about-us div.text h1, .about-us div.text p, .about-us div.image {
 		margin: 20px;
 	}
 	.about-us div.text h1 {
-		font-size: 16px;
+		font-size: 20px;
 	}
 	.about-us div.text p {
-		line-height: 130%;
-		font-size: 12px;
+		line-height: 150%;
+		font-size: 14px;
 	}
 }
 @media(max-width: 820px) and (orientation: portrait) {
@@ -384,7 +390,8 @@ nav ul li .btn-5:hover{
 		        flex-basis: 40%;
 	}
 	.about-us div.text h1 {
-		margin: 100px 50px 50px;
+		text-align: center;
+		margin: 50px 50px;
 	} 
 	.about-us div.image {
 		position: relative; 
@@ -399,12 +406,14 @@ nav ul li .btn-5:hover{
 }
 @media(max-width: 420px) and (orientation: portrait) {
 	.about-us {
-		height: 100vh;
+		height: 150vh;
 	}
 	.about-us div.text h1 {
+		margin: 30px;
 		font-size: 16px;
 	}
 	.about-us div.text p {
+		margin: 30px;
 		line-height: 120%;
 		font-size: 12px;
 	}
@@ -412,7 +421,6 @@ nav ul li .btn-5:hover{
 		width: 200px;
 	}
 }
-
 
 /*banner*/
 .banner {	 
@@ -669,6 +677,14 @@ div.arrow {
 	margin: -10px 15px 0;
 	background-color: #eee;	
 }
+@media (max-width: 425px) {
+	.gallery h1 {		
+		padding: 30px 60px 0;
+		margin-bottom:0;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+}
 /*contact*/
 .contact {
 	display: -ms-flexbox;
@@ -806,9 +822,9 @@ div.arrow {
 		height: 100vh;
 	}
 	.contact .information .info {
+		display: -ms-flexbox;
 		display: -webkit-box;
 		display: -webkit-flex;
-		display: -ms-flexbox;
 		display: flex;
 		-ms-flex-direction: column;
 		    -webkit-box-orient: vertical;
@@ -890,27 +906,28 @@ div.arrow {
 }
 @media (max-width: 425px) and (orientation: portrait) {
 	.contact {		
-		height: 150vh;
+		height: 170vh;
 	}
 	.contact .map {
-    -ms-flex-preferred-size: 50vh;
-        -webkit-flex-basis: 50vh;
-            flex-basis: 50vh;
+    -ms-flex-preferred-size: 70vh;
+        -webkit-flex-basis: 70vh;
+            flex-basis: 70vh;
 	}
 	.contact .map div#map {
-		height: 50vh;
+		height: 70vh;
 	}
 	.contact .information .wrap {
 		height: 100vh;
 	}
 	.contact .information h1 {
-		font-size: 26px;
-	}
-	.contact .information .info .contact-icon, .contact .information .info .text p.title {
+		padding: 20px 50px;
 		font-size: 20px;
 	}
+	.contact .information .info .contact-icon, .contact .information .info .text p.title {
+		font-size: 16px;
+	}
 	.contact .information .info .text {
-		font-size: 16px;	
+		font-size: 12px;	
 	}
 }
 footer {
