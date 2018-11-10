@@ -427,7 +427,7 @@ nav ul li .btn-5:hover{
 	position: relative;
 	width: 100%;
 	height: 100vh;
-	overflow: hidden;		
+	overflow: hidden;
 }
 .banner-image img {	
 	position: absolute;
@@ -486,42 +486,42 @@ div.arrow {
 }
 @-webkit-keyframes moveImage {
 	0% {		
-		opacity: 0;
+		opacity: 0.2;
 	}
-	8% {
-		opacity: 0;
+	2% {
+		opacity: 0.2;
 	}
-	13% {
+	15% {
 		opacity: 1;
 	}
-	87% {
+	85% {
 		opacity: 1;
 	}
-	92% {
-		opacity: 0;
+	98% {
+		opacity: 0.2;
 	}
 	100% {		
-		opacity: 0;
+		opacity: 0.2;
 	}
 }
 @keyframes moveImage {
 	0% {		
-		opacity: 0;
+		opacity: 0.2;
 	}
-	8% {
-		opacity: 0;
+	2% {
+		opacity: 0.2;
 	}
-	13% {
+	15% {
 		opacity: 1;
 	}
-	87% {
+	85% {
 		opacity: 1;
 	}
-	92% {
-		opacity: 0;
+	98% {
+		opacity: 0.2;
 	}
 	100% {		
-		opacity: 0;
+		opacity: 0.2;
 	}
 }
 @-webkit-keyframes moveText {
